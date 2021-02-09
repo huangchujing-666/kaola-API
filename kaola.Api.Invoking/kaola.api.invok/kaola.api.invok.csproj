@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43759186-6CAD-4DAF-AE80-1D5B3921E6A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>kaola.api.invok</RootNamespace>
+    <AssemblyName>kaola.api.invok</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="basicMsgModel\CityModel.cs" />
+    <Compile Include="basicMsgModel\CountryModel.cs" />
+    <Compile Include="basicMsgModel\DistrictModel.cs" />
+    <Compile Include="basicMsgModel\HsModel.cs" />
+    <Compile Include="basicMsgModel\ProvinceModel.cs" />
+    <Compile Include="basicMsg\kaola_basicMsg.cs" />
+    <Compile Include="categoryModel\bms_kaola_item.cs" />
+    <Compile Include="categoryModel\bms_kaola_itemcategory.cs" />
+    <Compile Include="categoryModel\bms_kaola_itemimage.cs" />
+    <Compile Include="categoryModel\bms_kaola_itempostage.cs" />
+    <Compile Include="categoryModel\bms_kaola_itemproperty.cs" />
+    <Compile Include="categoryModel\bms_kaola_itemtextproperty.cs" />
+    <Compile Include="categoryModel\bms_kaola_propertyeditpolicy.cs" />
+    <Compile Include="categoryModel\bms_kaola_propertyvalue.cs" />
+    <Compile Include="categoryModel\bms_kaola_rawitemedit.cs" />
+    <Compile Include="categoryModel\bms_kaola_rawitemproperty.cs" />
+    <Compile Include="categoryModel\bms_kaola_rawpropertycategory.cs" />
+    <Compile Include="categoryModel\bms_kaola_rawpropertyname.cs" />
+    <Compile Include="categoryModel\bms_kaola_rawsku.cs" />
+    <Compile Include="categoryModel\bms_kaola_rawskuproperty.cs" />
+    <Compile Include="category\kaola_category.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="kaola_parameter.cs" />
+    <Compile Include="kaola_seralia.cs" />
+    <Compile Include="kaola_sign.cs" />
+    <Compile Include="orderModel\logistics_companys_model.cs" />
+    <Compile Include="orderModel\order_model.cs" />
+    <Compile Include="order\kaola_order.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sellerMsgModel\BrandModel.cs" />
+    <Compile Include="sellerMsgModel\CateItem.cs" />
+    <Compile Include="sellerMsgModel\CateObjModel.cs" />
+    <Compile Include="sellerMsgModel\VenderModel.cs" />
+    <Compile Include="sellerMsg\kaola_seller.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

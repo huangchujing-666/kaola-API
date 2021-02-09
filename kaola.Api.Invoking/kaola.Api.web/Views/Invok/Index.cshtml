@@ -1,0 +1,842 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+@*kaola_order_search*@
+
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+    function cc()
+    {
+        //订单
+        $.ajax({
+            url: "/invok/kaola_order_search",
+            type:"get",
+            success: function (data) {
+                $("#aaa").html(data+"<br>");
+                $("#aaa").append("*****************************kaola_order_search*****************************************");
+            }
+        });
+
+        $.ajax({
+            url: "/invok/kaola_order_get",
+            type: "get",
+            success: function (data) {
+                //$("#aaa").html($("#aaa").html() + data);
+                var d = $("#aaa").html();
+                $("#aaa").html(d +"<br>"+ data+"<br>");
+                $("#aaa").append("*****************************kaola_order_get*****************************************");
+            }
+        });
+
+        $.ajax({
+            url: "/invok/kaola_logistics_deliver",
+            type: "get",
+            success: function (data) {
+                var d = $("#aaa").html();
+                $("#aaa").html(d + "<br>" + data + "<br>");
+                $("#aaa").append("*****************************kaola.logistics.deliver*****************************************");
+            }
+        });
+
+        $.ajax({
+            url: "/invok/kaola_logistics_companies_get",
+            type: "get",
+            success: function (data) {
+                var d = $("#aaa").html();
+                $("#aaa").html(d + "<br>" + data + "<br>");
+                $("#aaa").append("*****************************kaola.logistics.companies.get*****************************************");
+            }
+        });
+
+        //类目
+        $.ajax({
+            url: "/invok/kaola_itemprops_get",
+            type: "get",
+            success: function (data) {
+                var d = $("#bbb").html();
+                $("#bbb").html(d + "<br>" + data + "<br>");
+                $("#bbb").append("*****************************kaola.itemprops.get*****************************************");
+            }
+        });
+
+        $.ajax({
+            url: "/invok/kaola_itempropvalues_get",
+            type: "get",
+            success: function (data) {
+                var d = $("#bbb").html();
+                $("#bbb").html(d + "<br>" + data + "<br>");
+                $("#bbb").append("*****************************kaola.itempropvalues.get*****************************************");
+            }
+        });
+
+        $.ajax({
+            url: "/invok/kaola_item_update_listing",
+            type: "get",
+            success: function (data) {
+                var d = $("#bbb").html();
+                $("#bbb").html(d + "<br>" + data + "<br>");
+                $("#bbb").append("*****************************kaola.item.update.listing*****************************************");
+            }
+        });
+
+        $.ajax({
+            url: "/invok/kaola_item_update_delisting",
+            type: "get",
+            success: function (data) {
+                var d = $("#bbb").html();
+                $("#bbb").html(d + "<br>" + data + "<br>");
+                $("#bbb").append("*****************************kaola.item.update.delisting*****************************************");
+            }
+        });
+
+        $.ajax({
+            url: "/invok/kaola_item_get",
+            type: "get",
+            success: function (data) {
+                var d = $("#bbb").html();
+                $("#bbb").html(d + "<br>" + data + "<br>");
+                $("#bbb").append("*****************************kaola.item.get*****************************************");
+            }
+        });
+
+        $.ajax({
+            url: "/invok/kaola_item_batch_get",
+            type: "get",
+            success: function (data) {
+                var d = $("#bbb").html();
+                $("#bbb").html(d + "<br>" + data + "<br>");
+                $("#bbb").append("*****************************kaola.item.batch.get*****************************************");
+            }
+        });
+
+        $.ajax({
+            url: "/invok/kaola_item_batch_status_get",
+            type: "get",
+            success: function (data) {
+                var d = $("#bbb").html();
+                $("#bbb").html(d + "<br>" + data + "<br>");
+                $("#bbb").append("*****************************kaola.item.batch.status.get*****************************************");
+            }
+        });
+
+        $.ajax({
+            url: "/invok/kaola_item_sku_stock_update",
+            type: "get",
+            success: function (data) {
+                var d = $("#bbb").html();
+                $("#bbb").html(d + "<br>" + data + "<br>");
+                $("#bbb").append("*****************************kaola.item.sku.stock.update*****************************************");
+            }
+        });
+
+        $.ajax({
+            url: "/invok/kaola_item_sku_sale_price_update",
+            type: "get",
+            success: function (data) {
+                var d = $("#bbb").html();
+                $("#bbb").html(d + "<br>" + data + "<br>");
+                $("#bbb").append("*****************************kaola.item.sku.sale.price.update*****************************************");
+            }
+        });
+
+        $.ajax({
+            url: "/invok/kaola_item_add",
+            type: "get",
+            success: function (data) {
+                var d = $("#bbb").html();
+                $("#bbb").html(d + "<br>" + data + "<br>");
+                $("#bbb").append("*****************************kaola.item.add*****************************************");
+            }
+        });
+
+        $.ajax({
+            url: "/invok/kaola_item_sku_add",
+            type: "get",
+            success: function (data) {
+                var d = $("#bbb").html();
+                $("#bbb").html(d + "<br>" + data + "<br>");
+                $("#bbb").append("*****************************kaola.item.sku.add*****************************************");
+            }
+        });
+
+        $.ajax({
+            url: "/invok/kaola_item_img_upload",
+            type: "get",
+            success: function (data) {
+                var d = $("#bbb").html();
+                $("#bbb").html(d + "<br>" + data + "<br>");
+                $("#bbb").append("*****************************kaola.item.img.upload*****************************************");
+            }
+        });
+
+        //基本信息
+        $.ajax({
+            url: "/invok/kaola_common_countries_get",
+            type: "get",
+            success: function (data) {
+                var d = $("#ccc").html();
+                $("#ccc").html(d + "<br>" + data + "<br>");
+                $("#ccc").append("*****************************kaola.common.countries.get*****************************************");
+            }
+        });
+
+        $.ajax({
+            url: "/invok/kaola_common_provinces_get",
+            type: "get",
+            success: function (data) {
+                var d = $("#ccc").html();
+                $("#ccc").html(d + "<br>" + data + "<br>");
+                $("#ccc").append("*****************************kaola.common.provinces.get*****************************************");
+            }
+        });
+
+        $.ajax({
+            url: "/invok/kaola_common_city_get",
+            type: "get",
+            success: function (data) {
+                var d = $("#ccc").html();
+                $("#ccc").html(d + "<br>" + data + "<br>");
+                $("#ccc").append("*****************************kaola.common.city.get*****************************************");
+            }
+        });
+
+        //商家
+        $.ajax({
+            url: "/invok/kaola_vender_category_get",
+            type: "get",
+            success: function (data) {
+                var d = $("#ddd").html();
+                $("#ddd").html(d + "<br>" + data + "<br>");
+                $("#ddd").append("*****************************kaola.vender.category.get*****************************************");
+            }
+        });
+
+        $.ajax({
+            url: "/invok/kaola_vender_brand_get",
+            type: "get",
+            success: function (data) {
+                var d = $("#ddd").html();
+                $("#ddd").html(d + "<br>" + data + "<br>");
+                $("#ddd").append("*****************************kaola.vender.brand.get*****************************************");
+            }
+        });
+
+        $.ajax({
+            url: "/invok/kaola_vender_info_get",
+            type: "get",
+            success: function (data) {
+                var d = $("#ddd").html();
+                $("#ddd").html(d + "<br>" + data + "<br>");
+                $("#ddd").append("*****************************kaola.vender.info.get*****************************************");
+            }
+        });
+    }
+
+   
+    //订单
+    //kaola_order_search  根据订单信息查询订单
+    //kaola.order.get(获取指定订单的信息)
+    //kaola.logistics.deliver(商家发货通知)
+    //kaola.logistics.companies.get(获取快递公司的信息)
+    //类目
+    //kaola.itemprops.get(获取标准商品类目属性)
+    //kaola.itempropvalues.get(获取标准商品类目属性的值)
+    //kaola.item.update.listing(商品上架)
+    //kaola.item.update.delisting(商品下架)
+    //kaola.item.get(根据商品id获取单个商品的详细信息)
+    //kaola.item.batch.get(批量获取商品信息)
+    //kaola.item.batch.status.get(根据状态查询商品信息)
+    //kaola.item.sku.stock.update(修改指定sku的库存)
+    //kaola.item.sku.sale.price.update(修改指定sku的销售价)
+    //kaola.item.add(新增商品)
+    //kaola.item.sku.add(添加商品的sku)
+    //kaola.item.img.upload(上传产品图片)
+
+    //基本信息
+    //kaola.common.countries.get (获取所有国家信息)
+    //kaola.common.provinces.get (获取所有省份信息)
+    //kaola.common.city.get (获取城市信息)
+
+    //商家
+    //kaola.vender.category.get(获取商家类目)
+    //kaola.vender.brand.get(获取商家品牌)
+
+
+
+    $().ready(function () {
+
+
+        //订单
+        $("#search").click(function () {
+            $.ajax({
+                url: "/invok/kaola_order_search",
+                type: "get",
+                success: function (data) {
+                    $("#aaa").html(data + "<br>");
+                    $("#aaa").append("*****************************kaola_order_search*****************************************");
+                } 
+            });
+        });
+
+        $("#order_get").click(function () {
+            $.ajax({
+                url: "/invok/kaola_order_get",
+                type: "get",
+                success: function (data) {
+                    //$("#aaa").html($("#aaa").html() + data);
+                    var d = $("#aaa").html();
+                    $("#aaa").html(d + "<br>" + data + "<br>");
+                    $("#aaa").append("*****************************kaola_order_get*****************************************");
+                }
+            });
+        });
+
+        $("#deliver").click(function () {
+            $.ajax({
+                url: "/invok/kaola_logistics_deliver",
+                type: "get",
+                success: function (data) {
+                    var d = $("#aaa").html();
+                    $("#aaa").html(d + "<br>" + data + "<br>");
+                    $("#aaa").append("*****************************kaola.logistics.deliver*****************************************");
+                }
+            });
+        });
+
+        $("#companies_get").click(function () {
+            $.ajax({
+                url: "/invok/kaola_logistics_companies_get",
+                type: "get",
+                success: function (data) {
+                    var d = $("#aaa").html();
+                    $("#aaa").html(d + "<br>" + data + "<br>");
+                    $("#aaa").append("*****************************kaola.logistics.companies.get*****************************************");
+                }
+            });
+        });
+
+
+
+        //类目
+        $("#itemprops").click(function () {
+            $.ajax({
+                url: "/invok/kaola_itemprops_get",
+                type: "get",
+                success: function (data) {
+                    var d = $("#bbb").html();
+                    $("#bbb").html(d + "<br>" + data + "<br>");
+                    $("#bbb").append("*****************************kaola.itemprops.get*****************************************");
+                }
+            });
+        });
+
+        $("#itempropvalues").click(function () {
+            $.ajax({
+                url: "/invok/kaola_itempropvalues_get",
+                type: "get",
+                success: function (data) {
+                    var d = $("#bbb").html();
+                    $("#bbb").html(d + "<br>" + data + "<br>");
+                    $("#bbb").append("*****************************kaola.itempropvalues.get*****************************************");
+                }
+            });
+        });
+
+        $("#item_listing").click(function () {
+            $.ajax({
+                url: "/invok/kaola_item_update_listing",
+                type: "get",
+                success: function (data) {
+                    var d = $("#bbb").html();
+                    $("#bbb").html(d + "<br>" + data + "<br>");
+                    $("#bbb").append("*****************************kaola.item.update.listing*****************************************");
+                }
+            });
+        });
+
+        $("#item_delisting").click(function () {
+            $.ajax({
+                url: "/invok/kaola_item_update_delisting",
+                type: "get",
+                success: function (data) {
+                    var d = $("#bbb").html();
+                    $("#bbb").html(d + "<br>" + data + "<br>");
+                    $("#bbb").append("*****************************kaola.item.update.delisting*****************************************");
+                }
+            });
+        });
+
+        $("#item_get").click(function () {
+            $.ajax({
+                url: "/invok/kaola_item_get",
+                type: "get",
+                success: function (data) {
+                    var d = $("#bbb").html();
+                    $("#bbb").html(d + "<br>" + data + "<br>");
+                    $("#bbb").append("*****************************kaola.item.get*****************************************");
+                }
+            });
+        });
+
+        $("#batch_get").click(function () {
+            $.ajax({
+                url: "/invok/kaola_item_batch_get",
+                type: "get",
+                success: function (data) {
+                    var d = $("#bbb").html();
+                    $("#bbb").html(d + "<br>" + data + "<br>");
+                    $("#bbb").append("*****************************kaola.item.batch.get*****************************************");
+                }
+            });
+        });
+
+        $("#status_get").click(function () {
+            $.ajax({
+                url: "/invok/kaola_item_batch_status_get",
+                type: "get",
+                success: function (data) {
+                    var d = $("#bbb").html();
+                    $("#bbb").html(d + "<br>" + data + "<br>");
+                    $("#bbb").append("*****************************kaola.item.batch.status.get*****************************************");
+                }
+            });
+        });
+
+        $("#stock_update").click(function () {
+            $.ajax({
+                url: "/invok/kaola_item_sku_stock_update",
+                type: "get",
+                success: function (data) {
+                    var d = $("#bbb").html();
+                    $("#bbb").html(d + "<br>" + data + "<br>");
+                    $("#bbb").append("*****************************kaola.item.sku.stock.update*****************************************");
+                }
+            });
+        });
+        $("#sale_update").click(function () {
+            $.ajax({
+                url: "/invok/kaola_item_sku_sale_price_update",
+                type: "get",
+                success: function (data) {
+                    var d = $("#bbb").html();
+                    $("#bbb").html(d + "<br>" + data + "<br>");
+                    $("#bbb").append("*****************************kaola.item.sku.sale.price.update*****************************************");
+                }
+            });
+        });
+
+        $("#item_add").click(function () {
+            $.ajax({
+                url: "/invok/kaola_item_add",
+                type: "get",
+                success: function (data) {
+                    var d = $("#bbb").html();
+                    $("#bbb").html(d + "<br>" + data + "<br>");
+                    $("#bbb").append("*****************************kaola.item.add*****************************************");
+                }
+            });
+        });
+
+        $("#item_sku").click(function () {
+            console.log("123");
+            $.ajax({
+                url: "/invok/kaola_item_sku_add",
+                type: "get",
+                success: function (data) {
+                    var d = $("#bbb").html();
+                    $("#bbb").html(d + "<br>" + data + "<br>");
+                    $("#bbb").append("*****************************kaola.item.sku.add*****************************************");
+                }
+            });
+        });
+
+        $("#item_upload").click(function () {
+            $.ajax({
+                url: "/invok/kaola_item_img_upload",
+                type: "get",
+                success: function (data) {
+                    var d = $("#bbb").html();
+                    $("#bbb").html(d + "<br>" + data + "<br>");
+                    $("#bbb").append("*****************************kaola.item.img.upload*****************************************");
+                }
+            });
+        });
+
+
+
+
+        //基本信息
+        $("#countries_get").click(function () {
+            $.ajax({
+                url: "/invok/kaola_common_countries_get",
+                type: "get",
+                success: function (data) {
+                    var d = $("#ccc").html();
+                    $("#ccc").html(d + "<br>" + data + "<br>");
+                    $("#ccc").append("*****************************kaola.common.countries.get*****************************************");
+                }
+            });
+        });
+
+        $("#provinces_get").click(function () {
+            $.ajax({
+                url: "/invok/kaola_common_provinces_get",
+                type: "get",
+                success: function (data) {
+                    var d = $("#ccc").html();
+                    $("#ccc").html(d + "<br>" + data + "<br>");
+                    $("#ccc").append("*****************************kaola.common.provinces.get*****************************************");
+                }
+            });
+        });
+
+        $("#city_get").click(function () {
+            $.ajax({
+                url: "/invok/kaola_common_city_get",
+                type: "get",
+                success: function (data) {
+                    var d = $("#ccc").html();
+                    $("#ccc").html(d + "<br>" + data + "<br>");
+                    $("#ccc").append("*****************************kaola.common.city.get*****************************************");
+                }
+            });
+        });
+
+
+        //商家
+        $("#category_get").click(function () {
+            $.ajax({
+                url: "/invok/kaola_vender_category_get",
+                type: "get",
+                success: function (data) {
+                    var d = $("#ddd").html();
+                    $("#ddd").html(d + "<br>" + data + "<br>");
+                    $("#ddd").append("*****************************kaola.vender.category.get*****************************************");
+                }
+            });
+        });
+
+        $("#brand_get").click(function () {
+            $.ajax({
+                url: "/invok/kaola_vender_brand_get",
+                type: "get",
+                success: function (data) {
+                    var d = $("#ddd").html();
+                    $("#ddd").html(d + "<br>" + data + "<br>");
+                    $("#ddd").append("*****************************kaola.vender.brand.get*****************************************");
+                }
+            });
+        });
+
+        $("#info_get").click(function () {
+            $.ajax({
+                url: "/invok/kaola_vender_info_get",
+                type: "get",
+                success: function (data) {
+                    var d = $("#ddd").html();
+                    $("#ddd").html(d + "<br>" + data + "<br>");
+                    $("#ddd").append("*****************************kaola.vender.info.get*****************************************");
+                }
+            });
+        });
+
+
+
+
+        $("#search1").click(function () {
+            $.ajax({
+                url: "/invok/add123",
+                type: "get",
+                success: function (data) {
+                    var d = $("#ddd").html();
+                    $("#ddd").html(d + "<br>" + data + "<br>");
+                    $("#ddd").append("*****************************商品录入*****************************************");
+                }
+            });
+        })
+
+        $("#search2").click(function () {
+            $.ajax({
+                url: "/invok/productUpper",
+                type: "get",
+                success: function (data) {
+                    var d = $("#ddd").html();
+                    $("#ddd").html(d + "<br>" + data + "<br>");
+                    $("#ddd").append("*****************************商品上架*****************************************");
+                }
+            });
+        })
+
+        $("#search3").click(function () {
+            $.ajax({
+                url: "/invok/productLower",
+                type: "get",
+                success: function (data) {
+                    var d = $("#ddd").html();
+                    $("#ddd").html(d + "<br>" + data + "<br>");
+                    $("#ddd").append("*****************************商品下架*****************************************");
+                }
+            });
+        })
+
+
+        $("#search4").click(function () {
+            $.ajax({
+                url: "http://localhost:3786/invok/orderSend",
+                type: "get",
+                success: function (data) {
+                    var d = $("#ddd").html();
+                    $("#ddd").html(d + "<br>" + data + "<br>");
+                    $("#ddd").append("*****************************订单发货*****************************************");
+                }
+            });
+        })
+
+
+        $("#search5").click(function () {
+            $.ajax({
+                url: "/invok/productImgAdd",
+                type: "get",
+                success: function (data) {
+                    var d = $("#ddd").html();
+                    $("#ddd").html(d + "<br>" + data + "<br>");
+                    $("#ddd").append("*****************************图片上传*****************************************");
+                }
+            });
+        })
+
+
+        $("#search6").click(function () {
+            $.ajax({
+                url: "/invok/selectOrderStatus",
+                type: "get",
+                success: function (data) {
+                    var d = $("#ddd").html();
+                    $("#ddd").html(d + "<br>" + data + "<br>");
+                    $("#ddd").append("*****************************订单状态*****************************************");
+                }
+            });
+        })
+
+
+        $("#search7").click(function () {
+            $.ajax({
+                url: "/invok/productUpdatePrice",
+                type: "get",
+                success: function (data) {
+                    var d = $("#ddd").html();
+                    $("#ddd").html(d + "<br>" + data + "<br>");
+                    $("#ddd").append("*****************************修改价格*****************************************");
+                }
+            });
+        })
+
+
+        $("#search8").click(function () {
+            $.ajax({
+                url: "/invok/productUpdateStock",
+                type: "get",
+                success: function (data) {
+                    var d = $("#ddd").html();
+                    $("#ddd").html(d + "<br>" + data + "<br>");
+                    $("#ddd").append("*****************************修改库存*****************************************");
+                }
+            });
+        })
+
+
+        $("#search9").click(function () {
+            $.ajax({
+                url: "/invok/add456",
+                type: "get",
+                success: function (data) {
+                    var d = $("#ddd").html();
+                    $("#ddd").html(d + "<br>" + data + "<br>");
+                    $("#ddd").append("*****************************SKU录入*****************************************");
+                }
+            });
+        })
+
+        $("#search10").click(function () {
+            $.ajax({
+                url: "/invok/getSkuKey",
+                type: "get",
+                success: function (data) {
+                    var d = $("#ddd").html();
+                    $("#ddd").html(d + "<br>" + data + "<br>");
+                    $("#ddd").append("*****************************SKU录入*****************************************");
+                }
+            });
+        })
+
+        $("#search11").click(function () {
+            $.ajax({
+                url: "/invok/GetUpProduct",
+                data: {"statu":"在售"},
+                type: "get",
+                dataType: "json",
+                success: function (data) {
+                    var d = $("#eee").html();
+                    $("#eee").html(d + "<br>" + data + "<br>");
+                    $("#eee").append("*****************************获取商品条形码*****************************************");
+                }
+            });
+        })
+
+
+        $("#search12").click(function () {
+            $.ajax({
+                url: "/invok/get_sale_sku",
+                data: { "statu": "在售" },
+                type: "get",
+                dataType: "json",
+                success: function (data) {
+                    var d = $("#eee").html();
+                    $("#eee").html(d + "<br>" + data + "<br>");
+                    $("#eee").append("*****************************获取在售商品SKU*****************************************");
+                }
+            });
+        })
+
+    })
+
+
+
+</script>
+<input type="button" value="kaola_order_search" onclick="cc()" />
+
+<input type="button" value="商品录入" id="search1" />
+<input type="button" value="商品上架" id="search2" />
+<input type="button" value="商品下架" id="search3" />
+<input type="button" value="订单发货" id="search4" />
+<input type="button" value="图片上传" id="search5" />
+<input type="button" value="订单状态" id="search6" />
+<input type="button" value="修改价格" id="search7" />
+<input type="button" value="修改库存" id="search8" />
+<input type="button" value=" SKU录入" id="search9" />
+<input type="button" value="更新SKU_KEY" id="search10" />
+<input type="button" value=" 获取商品条形码" id="search11" />
+<input type="button" value=" 获取在售商品SKU" id="search12" />
+
+<hr />
+<div>
+订单：
+<input type="button" value="kaola.order.search" id="search" />
+<input type="button" value="kaola.order.get" id="order_get" />
+<input type="button" value="kaola.logistics.deliver" id="deliver" />
+<input type="button" value="kaola.logistics.companies.get" id="companies_get" />
+</div>
+
+<div>
+类目：
+<input type="button" value="kaola.itemprops.get" id="itemprops" />
+<input type="button" value="kaola.itempropvalues.get" id="itempropvalues" />
+<input type="button" value="kaola.item.update.listing" id="item_listing" />
+<input type="button" value="kaola.item.update.delisting" id="item_delisting" />
+<input type="button" value="kaola.item.get" id="item_get" />
+<input type="button" value="kaola.item.batch.get" id="batch_get" />
+<input type="button" value="kaola.item.batch.status.get" id="status_get" />
+<input type="button" value="kaola.item.sku.stock.update" id="stock_update" />
+<input type="button" value="kaola.item.sku.sale.price.update" id="sale_update" />
+<input type="button" value="kaola.item.add" id="item_add" />
+<input type="button" value="kaola.item.sku.add" id="item_sku" />
+<input type="button" value="kaola.item.img.upload" id="item_upload" />
+</div>
+
+<div>
+基本信息：
+<input type="button" value="kaola.common.countries.get" id="countries_get" />
+<input type="button" value="kaola.common.provinces.get" id="provinces_get" />
+<input type="button" value="kaola.common.city.get" id="city_get" />
+</div>
+
+
+<div>
+商家：
+<input type="button" value="kaola.vender.category.get" id="category_get" />
+<input type="button" value="kaola.vender.brand.get" id="brand_get" />
+<input type="button" value="kaola.vender.info.get" id="info_get" />
+</div>
+
+
+
+
+<hr />
+<div>
+    测试：
+    <div>
+        货号：<input id="txt_scode" type="text" />
+        库存：<input id="txt_stock" type="text" />
+        价格：<input id="txt_price" type="text" />
+    </div>
+    <div>
+        <input type="button" value="测试上传产品" id="ceshi_upload" />
+        <input type="button" value="测试修改价格" id="ceshi_price" />
+        <input type="button" value="测试修改库存" id="ceshi_stock" />
+        <input type="button" value="测试上架" id="ceshi_sj" />
+        <input type="button" value="测试下架" id="ceshi_xj" />
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<h1>订单</h1>
+<div id="aaa"></div>
+<h1>类目</h1>
+<div id="bbb"> </div>
+<h1>基本信息</h1>
+<div id="ccc"></div>
+<h1>商家</h1>
+<div id="ddd"></div>
+<h1>黄</h1>
+<div id="eee"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

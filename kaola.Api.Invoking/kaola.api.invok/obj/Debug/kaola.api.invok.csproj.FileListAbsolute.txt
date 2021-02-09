@@ -1,0 +1,5 @@
+E:\嘉兴\jx\kaola.Api.Invoking\kaola.api.invok\bin\Debug\kaola.api.invok.dll
+E:\嘉兴\jx\kaola.Api.Invoking\kaola.api.invok\bin\Debug\kaola.api.invok.pdb
+E:\嘉兴\jx\kaola.Api.Invoking\kaola.api.invok\obj\Debug\kaola.api.invok.dll
+E:\嘉兴\jx\kaola.Api.Invoking\kaola.api.invok\obj\Debug\kaola.api.invok.pdb
+E:\嘉兴\jx\kaola.Api.Invoking\kaola.api.invok\obj\Debug\kaola.api.invok.csprojResolveAssemblyReference.cache
